@@ -1,0 +1,25 @@
+{
+    "name": "WhiplashApi/whiplash-api-php",
+    "type": "library",
+	"version": "1.0",
+    "description": "Whiplash API for PHP",
+    "keywords": ["whiplash-api-php"],
+    "homepage": "https://github.com/mizanur-rahman/whiplash-api-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mizanur Rahman",
+			"email" : "mizan3008@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+		"ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": { "whiplash": "src/" }
+    },
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
