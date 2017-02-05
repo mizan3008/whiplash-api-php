@@ -1,5 +1,5 @@
 {
-    "name": "WhiplashApi/whiplash-api-php",
+    "name": "whiplash/whiplash-api-php",
     "type": "library",
 	"version": "1.0",
     "description": "Whiplash API for PHP",
