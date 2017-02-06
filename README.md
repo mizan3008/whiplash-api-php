@@ -29,14 +29,12 @@ Initialize the Whiplash API with your Whiplash API key:
 
 ```
 $apiKey = 'YOUR API KEY';
-$apiVersion = 'v1'; // OPTIONAL: Leave this blank to use the most recent API
-$mode = true; // OPTIONAL: If mode is true, this will use your sandbox account
-$api = new WhiplashApi($apiKey, $apiVersion, $mode);
+$api = new WhiplashApi($apiKey);
 ```
 
 Create item:
 ```
-$item = $api->create_item(array('sku' => 'NEW_SKU_123', 'name' => 'My Test Item', 'description' => 'My item description' ));
+$item = $api->create_item(['sku' => 'NEW_SKU_123', 'name' => 'My Test Item', 'description' => 'My item description']);
 ```
 
 Get item list:

@@ -12,25 +12,20 @@ namespace Whiplash;
 class WhiplashApi {
 
     // property declaration
-    public $base_url;
+    public $base_url = 'https://www.whiplashmerch.com/api/';
     public $connection;
 
-    // Constructor
-    public function __construct($api_key, $api_version = '', $test = false) {
-        if ($test == true) {
-            $this->base_url = 'http://testing.whiplashmerch.com/api/';
-        } else {
-            $this->base_url = 'https://www.whiplashmerch.com/api/';
-        }
-
+    public function __construct($api_key) {
+        
+        //initializing curl
         $ch = curl_init();
+        
         // Set headers
-        $headers = array('Content-type: application/json', 'Accept: application/json', "X-API-KEY: $api_key");
-        if ($api_version != '') {
-            array_push($headers, "X-API-VERSION: $api_version");
-        }
+        $headers = ['Content-type: application/json', 'Accept: application/json', "X-API-KEY: $api_key"];
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        
+        //set curl in this class
         $this->connection = $ch;
     }
 
