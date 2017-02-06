@@ -50,7 +50,7 @@ class WhiplashApi {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
         $result = curl_exec($ch); // Getting jSON result string
         if($result === false){
-			$result = ['code'=>400,'status'=>'error','message'=>curl_error($ch)];
+			$result = "{'code':400,'status':'error,'message:'".curl_error($ch)."'}";
         }
         $out = json_decode($result); // Decode the result
         return $out;
@@ -64,7 +64,7 @@ class WhiplashApi {
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
         $result = curl_exec($ch); // Getting jSON result string
 		if($result === false){
-			$result = ['code'=>400,'status'=>'error','message'=>curl_error($ch)];
+			$result = "{'code':400,'status':'error,'message:'".curl_error($ch)."'}";
         }
         $out = json_decode($result); // Decode the result
         return $out;
@@ -78,7 +78,7 @@ class WhiplashApi {
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
         $result = curl_exec($ch); // Getting jSON result string
 		if($result === false){
-			$result = ['code'=>400,'status'=>'error','message'=>curl_error($ch)];
+			$result = "{'code':400,'status':'error,'message:'".curl_error($ch)."'}";
         }
         $out = json_decode($result); // Decode the result
         return $out;
@@ -91,7 +91,7 @@ class WhiplashApi {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
         $result = curl_exec($ch); // Getting jSON result string
 		if($result === false){
-			$result = ['code'=>400,'status'=>'error','message'=>curl_error($ch)];
+			$result = "{'code':400,'status':'error,'message:'".curl_error($ch)."'}";
         }
         $out = json_decode($result); // Decode the result
         return $out;
