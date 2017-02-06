@@ -1,7 +1,6 @@
 {
     "name": "whiplash/whiplash-api-php",
     "type": "library",
-	"version": "1.0",
     "description": "Whiplash API for PHP",
     "keywords": ["whiplash-api-php"],
     "homepage": "https://github.com/mizanur-rahman/whiplash-api-php",
